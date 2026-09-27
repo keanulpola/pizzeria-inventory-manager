@@ -2,7 +2,7 @@
 
 A small Flask + Amazon DynamoDB inventory application built as a **collaborative graduate coursework project**. Supports creating, viewing, updating, and deleting inventory items, filtering by category, and highlighting stock below its configured minimum.
 
-## What I contributed
+## Contributions
 
 Based on the team's original project report, my contributions included category/low-stock filtering, resolving template-rendering issues, AWS configuration troubleshooting, CRUD testing, and documentation. Initial DynamoDB setup, the initial UI and portions of the data schema were collaborative/teammate contributions. **This is a team project, not a solo build.**
 
