@@ -22,9 +22,14 @@ UNITS = ["cases", "lbs", "pcs","gallons", "oz"]
 
 AWS_REGION = os.getenv("AWS_REGION_NAME", "us-east-1")
 TABLE_NAME = os.getenv("DYNAMODB_TABLE", "PizzeriaInventory")
+DYNAMODB_ENDPOINT = os.getenv("DYNAMODB_ENDPOINT_URL")
 
-# Create DynamoDB resource
-dynamodb = boto3.resource("dynamodb", region_name=AWS_REGION)
+dynamodb = boto3.resource(
+    "dynamodb",
+    region_name=AWS_REGION,
+    endpoint_url=DYNAMODB_ENDPOINT or None
+)
+
 table = dynamodb.Table(TABLE_NAME)
 
 
